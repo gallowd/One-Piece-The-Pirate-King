@@ -528,7 +528,7 @@ const placeCharacter = () => {
                 luffy.width = 140
                 luffy.height = 120
             }
-            luffy.stamina = luffy.stamina - 2;
+            luffy.stamina = luffy.stamina - 4;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
@@ -563,7 +563,7 @@ const placeCharacter = () => {
                 luffy.width = 170
                 luffy.height = 105
             }
-            luffy.stamina = luffy.stamina - 1;
+            luffy.stamina = luffy.stamina - 3;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
@@ -597,7 +597,7 @@ const placeCharacter = () => {
                 luffy.width = 210
                 luffy.height = 210
             }
-            luffy.stamina = luffy.stamina - 1;
+            luffy.stamina = luffy.stamina - 4;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
@@ -647,7 +647,7 @@ const placeCharacter = () => {
                 luffy.width = 110
                 luffy.height = 120
             }
-            luffy.stamina = luffy.stamina - 1;
+            luffy.stamina = luffy.stamina - 2;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
@@ -717,7 +717,7 @@ const placeCharacter = () => {
                 luffy.width = 100
                 luffy.height = 113
             }
-            luffy.stamina = luffy.stamina - 1;
+            luffy.stamina = luffy.stamina - 2;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
@@ -752,7 +752,7 @@ const placeCharacter = () => {
                 luffy.width = 100
                 luffy.height = 120
             }
-            luffy.stamina = luffy.stamina - 1;
+            luffy.stamina = luffy.stamina - 3;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
