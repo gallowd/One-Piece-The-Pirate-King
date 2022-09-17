@@ -800,22 +800,24 @@ const placeCharacter = () => {
     }
 
     katakuriHP.innerHTML = `
-    <h1>Katakuri</h1>
+    <h1>KATAKURI</h1>
     <p><strong>${katakuri.hp} HP</strong></p>
     `
     luffyHP.innerHTML = `
-    <h1>Luffy</h1>
-    <p><strong>${luffy.hp} HP</strong></p>
-    <p><strong>${luffy.stamina} STM</strong></p>`
+    <h1>LUFFY</h1>
+    <div class="stats">
+        <p><strong>${luffy.hp} HP</strong></p>
+        <p><strong>${luffy.stamina} STM</strong></p>
+    </div>`
 
     if (katakuri.hp <= 0){
         katakuriHP.innerHTML = `
-        <h1>Katakuri</h1>
+        <h1>KATAKURI</h1>
         <p><strong>${0} HP</strong></p>`
         sessionStorage.setItem("winner", "luffy");
     } else if (luffy.hp <= 0) {
         luffyHP.innerHTML = `
-        <h1>Luffy</h1>
+        <h1>LUFFY</h1>
         <p><strong>${0} HP</strong></p>`
         sessionStorage.setItem("winner", "katakuri");
     }
@@ -856,7 +858,7 @@ const step = () => {
                 popup: 'animate__animated animate__fadeOutUp'
             },
             html:
-                '<a href="./seleccion.html">Volver</a> '
+                '<button class="volver"><a href="./seleccion.html" class="volver__spam"><strong>VOLVER</strong></a></button>'
         })
     } else if (sessionStorage.getItem("winner") == "katakuri") {
         clearInterval(interval);
@@ -879,7 +881,7 @@ const step = () => {
                 popup: 'animate__animated animate__fadeOutUp'
             },
             html:
-                '<a href="./seleccion.html">Volver</a> '
+                '<button class="volver"><a href="./seleccion.html" class="volver__spam"><strong>VOLVER</strong></a></button>'
         })
     } else {
         window.requestAnimationFrame(() => {

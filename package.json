@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/gallowd/One-Piece-The-Pirate-King/issues"
   },
-  "homepage": "https://github.com/gallowd/One-Piece-The-Pirate-King#readme"
+  "homepage": "https://github.com/gallowd/One-Piece-The-Pirate-King#readme",
+  "dependencies": {
+    "@sweetalert2/theme-dark": "^5.0.12",
+    "sweetalert2": "^11.4.33"
+  }
 }

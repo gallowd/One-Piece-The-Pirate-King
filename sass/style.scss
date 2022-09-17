@@ -21,3 +21,27 @@ button {
 :root {
     --pixel-size: 1.5;
 }
+
+.volver {
+    border-radius: 30px;
+    width: 100px;
+    height: 60px;
+    font-family: 'Noto Serif Georgian', serif;
+    background-color: #AE0A0A;
+    font-size: 1.2rem;
+    transition: 0.5s;
+    &:hover {
+        width: 110px;
+        height: 70px;
+        text-decoration: white;
+    }
+
+    .volver__spam {
+        text-decoration: none;
+        color: black;
+        transition: 0.5s;
+        &:hover {
+            color: white;
+        }
+    }
+} 
