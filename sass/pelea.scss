@@ -44,7 +44,6 @@
             .luffy_icono {
                 position: relative;
                 border-radius: 50px;
-                z-index: 20;
             }
             .luffy_hp {
                 display: flex;
@@ -52,7 +51,7 @@
                 z-index: 20;
             }
             .hp_tarjeta {
-                background-color: aliceblue;
+                background-color: darkred;
                 border-radius: 5px;
                 padding: 5px;
             }

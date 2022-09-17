@@ -22,17 +22,17 @@ const katakuri = document.getElementById("katakuri");
 const katakuri_2 = document.getElementById("katakuriPersonaje");
 katakuri.y = 400;
 katakuri.x = 1350;
-katakuri.hp = 1000000;
+katakuri.hp = 100000;
 let atkKatakuri = "no";
 let katakuriDaño = 0;
 
 luffy.x = 250;
 luffy.y = 500;
-luffy.hp = 1000000;
-luffy.stamina = 1000;
+luffy.hp = 40000;
+luffy.stamina = 500;
 let held_directions = [];
 let speed = 3;
-let luffyDaño = 8;
+let luffyDaño = 14;
 let vision = "r";
 
 katakuri.setAttribute("class", "katakuri");
@@ -102,11 +102,11 @@ let interval = setInterval(() => {
     let num2 = Math.floor(Math.random()*2) + 1;
     let staminaCharge = setInterval(() => {
         if (luffy.stamina < 1000) {
-            luffy.stamina = luffy.stamina + 100;
+            luffy.stamina = luffy.stamina + 50;
         } else {
             clearInterval(staminaCharge);
         }
-    }, 3000)
+    }, 2000)
     if (num1 == 1) {
         if (num2 == 1) {
             katakuri.setAttribute("class", "katakuri_atk_1");
@@ -366,11 +366,15 @@ const placeCharacter = () => {
     
     let rightLimit = 1410;
     let leftLimit = 50;
+    let yLimit = 0;
     if (luffy.x < leftLimit) {
         luffy.x = leftLimit;
     }
     if (luffy.x + luffy.width + 10 > rightLimit) {
         luffy.x = rightLimit - luffy.width - 10;
+    }
+    if (luffy.y - luffy.height < yLimit) {
+        luffy.y = yLimit;
     }
 
     if (held_direction) {
@@ -444,7 +448,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 10;
+                luffyDaño = 12;
                 luffy.width = 210
                 luffy.height = 105
             }
@@ -454,7 +458,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 10;
+                luffyDaño = 12;
                 luffy.width = 210
                 luffy.height = 105
             }
@@ -466,7 +470,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 14;
+                luffyDaño = 16;
                 luffy.width = 260
                 luffy.height = 113
             }
@@ -476,7 +480,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 14;
+                luffyDaño = 16;
                 luffy.width = 180
                 luffy.height = 113
             }
@@ -510,7 +514,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 12;
+                luffyDaño = 30;
                 luffy.width = 230
                 luffy.height = 120
             }
@@ -520,7 +524,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 12;
+                luffyDaño = 30;
                 luffy.width = 140
                 luffy.height = 120
             }
@@ -545,7 +549,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 16;
+                luffyDaño = 28;
                 luffy.width = 170
                 luffy.height = 105
             }
@@ -555,7 +559,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 16;
+                luffyDaño = 28;
                 luffy.width = 170
                 luffy.height = 105
             }
@@ -580,7 +584,7 @@ const placeCharacter = () => {
                 luffy_2.setAttribute("class" ,"luffy_elephant_gun_right pixelart");
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 30;
+                luffyDaño = 38;
                 luffy.width = 310
                 luffy.height = 210
             }
@@ -589,7 +593,7 @@ const placeCharacter = () => {
                 luffy_2.setAttribute("class" ,"luffy_elephant_gun_left pixelart");
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 30;
+                luffyDaño = 38;
                 luffy.width = 210
                 luffy.height = 210
             }
@@ -629,7 +633,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 10;
+                luffyDaño = 22;
                 luffy.width = 210
                 luffy.height = 120
             }
@@ -639,7 +643,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 10;
+                luffyDaño = 22;
                 luffy.width = 110
                 luffy.height = 120
             }
@@ -664,7 +668,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 14;
+                luffyDaño = 20;
                 luffy.width = 150
                 luffy.height = 105
             }
@@ -674,7 +678,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 14;
+                luffyDaño = 20;
                 luffy.width = 170
                 luffy.height = 105
             }
@@ -699,7 +703,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 16;
+                luffyDaño = 24;
                 luffy.width = 240
                 luffy.height = 113
             }
@@ -709,7 +713,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 16;
+                luffyDaño = 24;
                 luffy.width = 100
                 luffy.height = 113
             }
@@ -734,7 +738,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "r";
                 atkLuffy = "si";
-                luffyDaño = 20;
+                luffyDaño = 26;
                 luffy.width = 240
                 luffy.height = 120
             }
@@ -744,7 +748,7 @@ const placeCharacter = () => {
                 luffy.y = 500;
                 vision = "l";
                 atkLuffy = "si";
-                luffyDaño = 20;
+                luffyDaño = 26;
                 luffy.width = 100
                 luffy.height = 120
             }
@@ -796,7 +800,8 @@ const placeCharacter = () => {
 
     katakuriHP.innerHTML = `
     <h1>Katakuri</h1>
-    <p><strong>${katakuri.hp} HP</strong></p>`
+    <p><strong>${katakuri.hp} HP</strong></p>
+    `
     luffyHP.innerHTML = `
     <h1>Luffy</h1>
     <p><strong>${luffy.hp} HP</strong></p>
