@@ -28,7 +28,7 @@ let katakuriDaño = 0;
 
 luffy.x = 250;
 luffy.y = 500;
-luffy.hp = 40000;
+luffy.hp = 50000;
 luffy.stamina = 1000;
 let staminaMax = 1000;
 let held_directions = [];
