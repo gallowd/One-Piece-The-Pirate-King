@@ -29,7 +29,7 @@ let katakuriDaño = 0;
 luffy.x = 250;
 luffy.y = 500;
 luffy.hp = 40000;
-luffy.stamina = 800;
+luffy.stamina = 1000;
 let staminaMax = 1000;
 let held_directions = [];
 let speed = 3;
@@ -768,9 +768,9 @@ const placeCharacter = () => {
             }
         }
         if (held_direction === directions.speed) {
-            speed = 45
+            speed = 50
             setTimeout(() => {
-                speed = 3
+                speed = 5
             }, 1000)
         }
     } else if (vision == "r") {

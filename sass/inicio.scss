@@ -1,38 +1,43 @@
-.titulo {
-    margin-left: 50px;
-}
+.inicio__body {
+    background: url(../images/menu.jpg);
+    background-size: cover;
 
-.boton {
-    display: flex;
-    margin-top: 150px;
-    justify-content: center;
-
-    .boton_container {
-        background: url(../images/mapa.png);
+    .titulo {
+        margin-left: 50px;
+    }
+    
+    .boton {
         display: flex;
-        flex-direction: column;
-        background-size:contain;
-        background-repeat: no-repeat;
-        width: 515px;
-        height: 270px;
-        border: none;
-        justify-content: start;
-        align-items: center;
-        .boton_container_start {
-            text-decoration: none;
-            color: black;
-            font-size: 6rem;
-            font-family: 'Imbue', serif;
-            transform: rotate(-5deg);
-            padding-top: 15px;
-            text-shadow: 2px 2px 3px rgb(66, 63, 63);
-            transition-duration: 0.3s;
-            transition-timing-function: ease-out;
-
-            &:hover {
-                font-size: 6.5rem;
-                color: #91140D;
-                text-shadow: 3px 3px 20px rgb(66, 63, 63);
+        margin-top: 150px;
+        justify-content: center;
+    
+        .boton_container {
+            background: url(../images/mapa.png);
+            display: flex;
+            flex-direction: column;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 515px;
+            height: 270px;
+            border: none;
+            justify-content: start;
+            align-items: center;
+            .boton_container_start {
+                text-decoration: none;
+                color: black;
+                font-size: 6rem;
+                font-family: 'Imbue', serif;
+                transform: rotate(-5deg);
+                padding-top: 15px;
+                text-shadow: 2px 2px 3px rgb(66, 63, 63);
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+    
+                &:hover {
+                    font-size: 6.5rem;
+                    color: #91140D;
+                    text-shadow: 3px 3px 20px rgb(66, 63, 63);
+                }
             }
         }
     }

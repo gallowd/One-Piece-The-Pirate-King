@@ -3,24 +3,28 @@
     
     .map_mirror_world {
         background-image: url("../scenarios/mirror_world.jpg");
+        background-size: cover;
         position: relative;
         width: 100%;
         height: 100vh;
     }
     .map_enies_lobby {
         background-image: url("../scenarios/enies_lobby.jpg");
+        background-size: cover;
         position: relative;
         width: 100%;
         height: 100vh;
     }
     .map_dressrosa {
         background-image: url("../scenarios/dressrosa.jpg");
+        background-size: cover;
         position: relative;
         width: 100%;
         height: 100vh;
     }
     .map_marineford {
         background-image: url("../scenarios/marineford.jpg");
+        background-size: cover;
         position: relative;
         width: 100%;
         height: 100vh;
@@ -51,7 +55,7 @@
                 z-index: 20;
             }
             .hp_tarjeta {
-                background-color: darkred;
+                background-color: firebrick;
                 border-radius: 5px;
                 padding: 5px;
             }
