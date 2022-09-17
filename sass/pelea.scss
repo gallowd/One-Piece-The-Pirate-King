@@ -523,7 +523,7 @@
             background-position-x: -200px;
             width: calc(950px * var(--pixel-size)*9);
             height: calc(99.625px * var(--pixel-size)*9);
-            animation: elephantGunAnimation 1.85s steps(23) infinite;
+            animation: elephantGunAnimation 1.3s steps(23) infinite;
         }
         .luffy_elephant_gun_left {
             background: url("../personajes/Luffy/elephant_gun.png") no-repeat;
@@ -533,7 +533,7 @@
             position: absolute;
             width: calc(950px * var(--pixel-size)*9);
             height: calc(99.625px * var(--pixel-size)*9);
-            animation: elephantGunAnimation 1.85s steps(23) infinite;
+            animation: elephantGunAnimation 1.3s steps(23) infinite;
         }
         @keyframes elephantGunAnimation {
             from {

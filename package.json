@@ -4,7 +4,7 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "start": "sass style.scss ./css/style.css -w --no-source-map -s compressed"
+    "start": "sass sass/style.scss css/style.css -w --no-source-map -s compressed"
   },
   "repository": {
     "type": "git",

@@ -29,7 +29,8 @@ let katakuriDaño = 0;
 luffy.x = 250;
 luffy.y = 500;
 luffy.hp = 40000;
-luffy.stamina = 500;
+luffy.stamina = 800;
+let staminaMax = 1000;
 let held_directions = [];
 let speed = 3;
 let luffyDaño = 14;
@@ -101,7 +102,7 @@ let interval = setInterval(() => {
     let num1 = Math.floor(Math.random()*5) + 1;
     let num2 = Math.floor(Math.random()*2) + 1;
     let staminaCharge = setInterval(() => {
-        if (luffy.stamina < 1000) {
+        if (luffy.stamina < staminaMax) {
             luffy.stamina = luffy.stamina + 50;
         } else {
             clearInterval(staminaCharge);
@@ -507,7 +508,7 @@ const placeCharacter = () => {
                 luffy.height = 120
             }
         }
-        if (held_direction === directions.buso_koka_gatling && luffy.stamina > 100 && true) {
+        if (held_direction === directions.buso_koka_gatling && luffy.stamina > 0 && true) {
             if (vision == "r") {
                 luffy.setAttribute("class", "luffy_buso_koka_gatling");
                 luffy_2.setAttribute("class" ,"luffy_buso_koka_gatling_right pixelart");
@@ -528,7 +529,7 @@ const placeCharacter = () => {
                 luffy.width = 140
                 luffy.height = 120
             }
-            luffy.stamina = luffy.stamina - 4;
+            luffy.stamina = luffy.stamina - 3;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
@@ -542,7 +543,7 @@ const placeCharacter = () => {
                 }
             }
         }
-        if (held_direction === directions.buso_koka_muchi && luffy.stamina > 100 && true) {
+        if (held_direction === directions.buso_koka_muchi && luffy.stamina > 0 && true) {
             if (vision == "r") {
                 luffy.setAttribute("class", "luffy_buso_koka_muchi");
                 luffy_2.setAttribute("class" ,"luffy_buso_koka_muchi_right pixelart");
@@ -563,7 +564,7 @@ const placeCharacter = () => {
                 luffy.width = 170
                 luffy.height = 105
             }
-            luffy.stamina = luffy.stamina - 3;
+            luffy.stamina = luffy.stamina - 2;
             if (luffy.stamina <= 100) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
@@ -577,7 +578,7 @@ const placeCharacter = () => {
                 }
             }
         }
-        if (held_direction === directions.elephant_gun && luffy.stamina > 100 && true) {
+        if (held_direction === directions.elephant_gun && luffy.stamina > 0 && true) {
             luffy.y = 440;
             if (vision == "r") {
                 luffy.setAttribute("class", "luffy_elephant_gun");
@@ -626,7 +627,7 @@ const placeCharacter = () => {
                 vision = "l";
             }
         }
-        if (held_direction === directions.jet_gatling && luffy.stamina > 100 && true) {
+        if (held_direction === directions.jet_gatling && luffy.stamina > 0 && true) {
             if (vision == "r") {
                 luffy.setAttribute("class", "luffy_jet_gatling");
                 luffy_2.setAttribute("class" ,"luffy_jet_gatling_right pixelart");
@@ -661,7 +662,7 @@ const placeCharacter = () => {
                 }
             }
         }
-        if (held_direction === directions.jet_muchi && luffy.stamina > 100 && true) {
+        if (held_direction === directions.jet_muchi && luffy.stamina > 0 && true) {
             if (vision == "r") {
                 luffy.setAttribute("class", "luffy_jet_muchi");
                 luffy_2.setAttribute("class" ,"luffy_jet_muchi_right pixelart");
@@ -683,7 +684,7 @@ const placeCharacter = () => {
                 luffy.height = 105
             }
             luffy.stamina = luffy.stamina - 1;
-            if (luffy.stamina <= 100) {
+            if (luffy.stamina <= 0) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
                     luffy_2.setAttribute("class" ,"luffy_spritesheet pixelart");
@@ -696,7 +697,7 @@ const placeCharacter = () => {
                 }
             }
         }
-        if (held_direction === directions.jet_rifle && luffy.stamina > 100 && true) {
+        if (held_direction === directions.jet_rifle && luffy.stamina > 0 && true) {
             if (vision == "r") {
                 luffy.setAttribute("class", "luffy_jet_rifle");
                 luffy_2.setAttribute("class" ,"luffy_jet_rifle_right pixelart");
@@ -718,7 +719,7 @@ const placeCharacter = () => {
                 luffy.height = 113
             }
             luffy.stamina = luffy.stamina - 2;
-            if (luffy.stamina <= 100) {
+            if (luffy.stamina <= 0) {
                 if (vision == "r") {
                     luffy.setAttribute("class", "luffy");
                     luffy_2.setAttribute("class" ,"luffy_spritesheet pixelart");
@@ -731,7 +732,7 @@ const placeCharacter = () => {
                 }
             }
         }
-        if (held_direction === directions.jet_bazooka && luffy.stamina > 100 && true) {
+        if (held_direction === directions.jet_bazooka && luffy.stamina > 0 && true) {
             if (vision == "r") {
                 luffy.setAttribute("class", "luffy_jet_bazooka");
                 luffy_2.setAttribute("class" ,"luffy_jet_bazooka_right pixelart");
