@@ -1,0 +1,70 @@
+[
+    {
+        "key": "arrow_right.png",
+        "movimiento": "Derecha"
+    },
+    {
+        "key": "arrow_left.png",
+        "movimiento": "Izquierda"
+    },
+    {
+        "key": "arrow_down.png",
+        "movimiento": "Agacharse"
+    },
+    {
+        "key": "arrow_up.png",
+        "movimiento": "Saltar"
+    },
+    {
+        "key": "q_key.png",
+        "movimiento": "Gomu Gomu no Gatling"
+    },
+    {
+        "key": "w_key.png",
+        "movimiento": "Gomu Gomu no Muchi"
+    },
+    {
+        "key": "e_key.png",
+        "movimiento": "Gomu Gomu no Rifle"
+    },
+    {
+        "key": "r_key.png",
+        "movimiento": "Gomu Gomu no Bazooka"
+    },
+    {
+        "key": "a_key.png",
+        "movimiento": "Gear 2 Gomu Gomu no Jet Gatling"
+    },
+    {
+        "key": "s_key.png",
+        "movimiento": "Gear 2 Gomu Gomu no Jet Muchi"
+    },
+    {
+        "key": "d_key.png",
+        "movimiento": "Gear 2 Gomu Gomu no Jet Rifle"
+    },
+    {
+        "key": "f_key.png",
+        "movimiento": "Gear 2 Gomu Gomu no Jet Bazooka"
+    },
+    {
+        "key": "z_key.png",
+        "movimiento": "Buso koka Gomu Gomu no Gatling"
+    },
+    {
+        "key": "x_key.png",
+        "movimiento": "Buso koka Gomu Gomu no Muchi"
+    },
+    {
+        "key": "c_key.png",
+        "movimiento": "Gomu Gomu no Elephant Gun"
+    },
+    {
+        "key": "v_key.png",
+        "movimiento": "Busoshoku Haki"
+    },
+    {
+        "key": "espacio_key.png",
+        "movimiento": "Gear 2"
+    }
+]

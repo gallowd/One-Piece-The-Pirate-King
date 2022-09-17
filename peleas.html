@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece: The Pirate King</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" type="image/jpg" href="/images/logo.png"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="body_fight">
+    <div id="map">
+        <div id="hp" class="hp">
+            <div class="icono">
+                <img class="luffy_icono" src="images/luffy_icono.png" width="70px" height="70px" alt="">
+                <div id="luffy_hp" class="hp_tarjeta">
+                </div>
+            </div>
+            <div class="icono">
+                <img class="katakuri_icono" src="images/katakuri_icono.png" width="70px" height="70px" alt="">
+                <div id="katakuri_hp" class="hp_tarjeta">
+                </div>
+            </div>
+        </div>
+        <div id="luffy" class="luffy" facing="rigth" walking="true">
+            <div id="luffyPersonaje" class="luffy_spritesheet pixelart"></div>
+        </div>
+        <div id="katakuri" class="katakuri">
+            <div id="katakuriPersonaje" class="katakuri_spritesheet pixelart"></div>
+        </div>
+    </div>
+    <audio autoplay loop>
+        <source src="music/katakuri_theme.mp3" type="audio/mp3">
+    </audio>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.26/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

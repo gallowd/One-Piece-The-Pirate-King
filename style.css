@@ -1,0 +1,1048 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.body_fight {
+    overflow: hidden;
+}
+
+:root {
+    --pixel-size: 1.5;
+}
+
+.pixelart {
+    image-rendering: pixelated;
+}
+
+.map_mirror_world {
+    background-image: url("scenarios/mirror_world.jpg");
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.map_enies_lobby {
+    background-image: url("scenarios/enies_lobby.jpg");
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.map_dressrosa {
+    background-image: url("scenarios/dressrosa.jpg");
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.map_marineford {
+    background-image: url("scenarios/marineford.jpg");
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.hp {
+    display: flex;
+    flex-direction: row;
+    gap: 1060px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    position: absolute;
+}
+.hp_tarjeta {
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 5px;
+}
+.luffy_hp {
+    display: flex;
+    flex-direction: row;
+    z-index: 20;
+}
+.katakuri_hp {
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+}
+.luffy_icono {
+    position: relative;
+    border-radius: 50px;
+    z-index: 20;
+}
+.katakuri_icono {
+    border-radius: 50px;
+    z-index: 20;
+}
+.icono {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.luffy {
+    width: calc(83.125px * var(--pixel-size));
+    height: calc(79.625px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+
+.luffy_spritesheet {
+    background: url("personajes/Luffy/luffy_movimientos.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(83.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: walkAnimation 0.5s steps(3) infinite;
+}
+
+.luffy_derrotado {
+    width: calc(85px * var(--pixel-size));
+    height: calc(30px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+.luffy_derrotado_right {
+    background: url("personajes/Luffy/luffy_derrotado.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(83.125px * var(--pixel-size));
+    height: calc(79.625px * var(--pixel-size));
+}
+.luffy_derrotado_left {
+    background: url("personajes/Luffy/luffy_derrotado.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -32px;
+    position: absolute;
+    width: calc(83.125px * var(--pixel-size));
+    height: calc(79.625px * var(--pixel-size));
+}
+
+.luffy_victorioso {
+    width: calc(50px * var(--pixel-size));
+    height: calc(70px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+.luffy_victorioso_right {
+    background: url("personajes/Luffy/luffy_victorioso.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(83.125px * var(--pixel-size)*4);
+    height: calc(79.625px * var(--pixel-size)*4);
+    animation: luffyVictoriosoAnimation 1s steps(6) infinite;
+}
+.luffy_victorioso_left {
+    background: url("personajes/Luffy/luffy_victorioso.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -32px;
+    position: absolute;
+    width: calc(83.125px * var(--pixel-size)*4);
+    height: calc(79.625px * var(--pixel-size)*4);
+    animation: luffyVictoriosoAnimation 1s steps(6) infinite;
+}
+@keyframes luffyVictoriosoAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-510px, 0, 0);
+    }
+}
+
+.katakuri {
+    width: calc(65px * var(--pixel-size));
+    height: calc(145px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+.katakuri_spritesheet_left {
+    background: url("personajes/Katakuri/katakuri_movimientos.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -60px;
+    background-position-y: -440px;
+    position: absolute;
+    width: calc(200px * var(--pixel-size)*3);
+    height: calc(100px * var(--pixel-size)*3);
+    animation: katakuriAnimation 0.7s steps(4) infinite;
+}
+.katakuri_spritesheet_right {
+    background: url("personajes/Katakuri/katakuri_movimientos.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -60px;
+    position: absolute;
+    width: calc(200px * var(--pixel-size)*3);
+    height: calc(100px * var(--pixel-size)*3);
+    animation: katakuriAnimation 0.7s steps(4) infinite;
+}
+@keyframes katakuriAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-900px, 0, 0);
+    }
+}
+
+.katakuri_derrotado {
+    width: calc(100px * var(--pixel-size)*1.5);
+    height: calc(30px * var(--pixel-size)*1.5);
+    overflow: hidden;
+    position: absolute;
+}
+.katakuri_derrotado_spritesheet {
+    background: url("personajes/Katakuri/katakuri_derrotado.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(100px * var(--pixel-size)*1.5);
+    height: calc(30px * var(--pixel-size)*1.5);
+}
+
+.katakuri_atk_1_right {
+    background: url("personajes/Katakuri/katakuri_atk_1.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -470px;
+    position: absolute;
+    width: calc(960.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk1Animation 1.8s steps(10) infinite;
+}
+.katakuri_atk_1_left {
+    background: url("personajes/Katakuri/katakuri_atk_1.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -345px;
+    position: absolute;
+    width: calc(960.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk1Animation 1.8s steps(10) infinite;
+}
+.katakuri_atk_1 {
+    width: calc(600px * var(--pixel-size));
+    height: calc(270px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes katakuriAtk1Animation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-12900px, 0, 0);
+    }
+}
+
+.katakuri_atk_2_right {
+    background: url("personajes/Katakuri/katakuri_atk_2.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(560.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk2Animation 1.2s steps(9) infinite;
+}
+.katakuri_atk_2_left {
+    background: url("personajes/Katakuri/katakuri_atk_2.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -290px;
+    position: absolute;
+    width: calc(560.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk2Animation 1.2s steps(9) infinite;
+}
+.katakuri_atk_2 {
+    width: calc(560px * var(--pixel-size));
+    height: calc(200px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes katakuriAtk2Animation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-7555px, 0, 0);
+    }
+}
+
+.katakuri_atk_3_right {
+    background: url("personajes/Katakuri/katakuri_atk_3.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(360.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk3Animation 1.8s steps(10) infinite;
+}
+.katakuri_atk_3_left {
+    background: url("personajes/Katakuri/katakuri_atk_3.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -470px;
+    background-position-x: 50px;
+    position: absolute;
+    width: calc(360.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk3Animation 1.8s steps(10) infinite;
+}
+.katakuri_atk_3 {
+    width: calc(300px * var(--pixel-size));
+    height: calc(270px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes katakuriAtk3Animation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-4900px, 0, 0);
+    }
+}
+
+.katakuri_atk_4_right {
+    background: url("personajes/Katakuri/katakuri_atk_4.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(560.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk4Animation 1.3s steps(11) infinite;
+}
+.katakuri_atk_4_left {
+    background: url("personajes/Katakuri/katakuri_atk_4.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -390px;
+    background-position-x: -60px;
+    position: absolute;
+    width: calc(560.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk4Animation 1.3s steps(11) infinite;
+}
+.katakuri_atk_4 {
+    width: calc(410px * var(--pixel-size));
+    height: calc(200px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes katakuriAtk4Animation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-7555px, 0, 0);
+    }
+}
+
+.katakuri_atk_5_right {
+    background: url("personajes/Katakuri/katakuri_atk_5.png") no-repeat;
+    background-size: 100%;
+    background-position-x: 80px;
+    position: absolute;
+    width: calc(700px * var(--pixel-size)*30);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk5Animation 2s steps(36) infinite;
+}
+.katakuri_atk_5_left {
+    background: url("personajes/Katakuri/katakuri_atk_5.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -800px;
+    background-position-x: 60px;
+    position: absolute;
+    width: calc(700px * var(--pixel-size)*30);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: katakuriAtk5Animation 2s steps(36) infinite;
+}
+.katakuri_atk_5 {
+    width: calc(580px * var(--pixel-size));
+    height: calc(450px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes katakuriAtk5Animation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-31600px, 0, 0);
+    }
+}
+
+.luffy_gatling_right {
+    background: url("personajes/Luffy/gatling.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(100.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: gatlingAnimation 0.7s steps(8) infinite;
+}
+.luffy_gatling_left {
+    background: url("personajes/Luffy/gatling.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -115px;
+    position: absolute;
+    width: calc(100.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    animation: gatlingAnimation 0.7s steps(8) infinite;
+}
+.luffy_gatling {
+    width: calc(120px * var(--pixel-size));
+    height: calc(79.625px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes gatlingAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-1350px, 0, 0);
+    }
+}
+
+.luffy_muchi_right {
+    background: url("personajes/Luffy/muchi.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(208px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: muchiAnimation 1.15s steps(10) infinite;
+}
+.luffy_muchi_left {
+    background: url("personajes/Luffy/muchi.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -105px;
+    position: absolute;
+    width: calc(208px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: muchiAnimation 1.15s steps(10) infinite;
+}
+.luffy_muchi {
+    width: calc(170px * var(--pixel-size));
+    height: calc(70px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes muchiAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-2850px, 0, 0);
+    }
+}
+
+.luffy_rifle_right {
+    background: url("personajes/Luffy/rifle.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -110px;
+    background-position-y: -18px;
+    position: absolute;
+    width: calc(335px * var(--pixel-size)*9);
+    height: calc(10px * var(--pixel-size)*9);
+    animation: rifleAnimation 1.5s steps(13) infinite;
+}
+.luffy_rifle_left {
+    background: url("personajes/Luffy/rifle.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -17px;
+    background-position-y: -137px;
+    position: absolute;
+    width: calc(325px * var(--pixel-size)*9);
+    height: calc(10px * var(--pixel-size)*9);
+    animation: rifleAnimation 1.5s steps(13) infinite;
+}
+.luffy_rifle {
+    width: calc(190px * var(--pixel-size));
+    height: calc(75px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+    background-position-x: 110px;
+}
+@keyframes rifleAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-4400px, 0, 0);
+    }
+}
+
+.luffy_bazooka_right {
+    background: url("personajes/Luffy/bazooka.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -110px;
+    position: absolute;
+    width: calc(470px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: bazookaAnimation 1.7s steps(16) infinite;
+}
+.luffy_bazooka_left {
+    background: url("personajes/Luffy/bazooka.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -130px;
+    background-position-x: -32px;
+    position: absolute;
+    width: calc(470px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: bazookaAnimation 1.7s steps(16) infinite;
+}
+.luffy_bazooka {
+    width: calc(230px * var(--pixel-size));
+    height: calc(80px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes bazookaAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-6300px, 0, 0);
+    }
+}
+
+.luffy_buso_koka_gatling_right {
+    background: url("personajes/Luffy/buso_koka_gatling.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -5px;
+    background-position-x: -120px;
+    position: absolute;
+    width: calc(175px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: busoKokaGatlingAnimation 0.5s steps(6) infinite;
+}
+.luffy_buso_koka_gatling_left {
+    background: url("personajes/Luffy/buso_koka_gatling.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -150px;
+    background-position-x: 30px;
+    position: absolute;
+    width: calc(175px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: busoKokaGatlingAnimation 0.5s steps(6) infinite;
+}
+.luffy_buso_koka_gatling {
+    width: calc(200px * var(--pixel-size));
+    height: calc(80px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes busoKokaGatlingAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-2400px, 0, 0);
+    }
+}
+
+.luffy_buso_koka_muchi_right {
+    background: url("personajes/Luffy/buso_koka_muchi.png") no-repeat;
+    background-size: 100%;
+    background-position-y: 10px;
+    position: absolute;
+    width: calc(208px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: busoKokaMuchiAnimation 1.15s steps(10) infinite;
+}
+.luffy_buso_koka_muchi_left {
+    background: url("personajes/Luffy/buso_koka_muchi.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -100px;
+    position: absolute;
+    width: calc(208px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: busoKokaMuchiAnimation 1.15s steps(10) infinite;
+}
+.luffy_buso_koka_muchi {
+    width: calc(190px * var(--pixel-size));
+    height: calc(70px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes busoKokaMuchiAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-2850px, 0, 0);
+    }
+}
+
+.luffy_elephant_gun_right {
+    background: url("personajes/Luffy/elephant_gun.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    background-position-x: -200px;
+    width: calc(950px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: elephantGunAnimation 1.85s steps(23) infinite;
+}
+.luffy_elephant_gun_left {
+    background: url("personajes/Luffy/elephant_gun.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -220px;
+    background-position-x: -200px;
+    position: absolute;
+    width: calc(950px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: elephantGunAnimation 1.85s steps(23) infinite;
+}
+.luffy_elephant_gun {
+    width: calc(240px * var(--pixel-size));
+    height: calc(140px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes elephantGunAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-12700px, 0, 0);
+    }
+}
+
+.luffy_busoshoku_haki_right {
+    background: url("personajes/Luffy/busoshoku_haki.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(20px * var(--pixel-size)*5);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: busoshokuHakiAnimation 0.16s steps(2);
+}
+.luffy_busoshoku_haki_left {
+    background: url("personajes/Luffy/busoshoku_haki.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -115px;
+    position: absolute;
+    width: calc(20px * var(--pixel-size)*5);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: busoshokuHakiAnimation 0.16s steps(2);
+}
+.luffy_busoshoku_haki {
+    width: calc(40px * var(--pixel-size));
+    height: calc(80px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes busoshokuHakiAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-180px, 0, 0);
+    }
+}
+
+.luffy_jet_gatling_right {
+    background: url("personajes/Luffy/jet_gatling.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -120px;
+    position: absolute;
+    width: calc(206px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetGatlingAnimation 0.5s steps(8) infinite;
+}
+.luffy_jet_gatling_left {
+    background: url("personajes/Luffy/jet_gatling.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -153px;
+    position: absolute;
+    width: calc(206px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetGatlingAnimation 0.5s steps(8) infinite;
+}
+.luffy_jet_gatling {
+    width: calc(200px * var(--pixel-size));
+    height: calc(100px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes jetGatlingAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-2750px, 0, 0);
+    }
+}
+
+.luffy_jet_muchi_right {
+    background: url("personajes/Luffy/jet_muchi.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -20px;
+    background-position-y: 10px;
+    position: absolute;
+    width: calc(208px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetMuchiAnimation 0.6s steps(10) infinite;
+}
+.luffy_jet_muchi_left {
+    background: url("personajes/Luffy/jet_muchi.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -100px;
+    position: absolute;
+    width: calc(208px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetMuchiAnimation 0.6s steps(10) infinite;
+}
+.luffy_jet_muchi {
+    width: calc(170px * var(--pixel-size));
+    height: calc(80px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes jetMuchiAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-2850px, 0, 0);
+    }
+}
+
+.luffy_jet_rifle_right {
+    background: url("personajes/Luffy/jet_rifle.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -110px;
+    background-position-y: -15px;
+    position: absolute;
+    width: calc(335px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetRifleAnimation 0.45s steps(10) infinite;
+}
+.luffy_jet_rifle_left {
+    background: url("personajes/Luffy/jet_rifle.png") no-repeat;
+    background-size: 100%;
+    background-position-x: -62px;
+    background-position-y: -165px;
+    position: absolute;
+    width: calc(335px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetRifleAnimation 0.45s steps(10) infinite;
+}
+.luffy_jet_rifle {
+    width: calc(210px * var(--pixel-size));
+    height: calc(90px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes jetRifleAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-3700px, 0, 0);
+    }
+}
+
+.luffy_jet_bazooka_right {
+    background: url("personajes/Luffy/jet_bazooka.png") no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: calc(270px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetBazookaAnimation 0.4s steps(10) infinite;
+}
+.luffy_jet_bazooka_left {
+    background: url("personajes/Luffy/jet_bazooka.png") no-repeat;
+    background-size: 100%;
+    background-position-y: -130px;
+    background-position-x: 40px;
+    position: absolute;
+    width: calc(270px * var(--pixel-size)*9);
+    height: calc(99.625px * var(--pixel-size)*9);
+    animation: jetBazookaAnimation 0.4s steps(10) infinite;
+}
+.luffy_jet_bazooka {
+    width: calc(230px * var(--pixel-size));
+    height: calc(90px * var(--pixel-size));
+    overflow: hidden;
+    position: absolute;
+}
+@keyframes jetBazookaAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-3750px, 0, 0);
+    }
+}
+
+.luffy[facing="left"] .luffy_spritesheet {
+    background-position-y: -475px;
+}
+.luffy_run_right {
+    background: url("personajes/Luffy/luffy_movimientos.png") no-repeat;
+    background-size: 100%;
+    width: calc(83.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    background-position-y: -110px;
+    position: absolute;
+    animation: runAnimation 0.8s steps(8) infinite;
+}
+.luffy_run_left {
+    background: url("personajes/Luffy/luffy_movimientos.png") no-repeat;
+    background-size: 100%;
+    width: calc(83.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    background-position-y: -580px;
+    position: absolute;
+    animation: runAnimation 0.8s steps(8) infinite;
+}
+.luffy_jump_right {
+    background: url("personajes/Luffy/luffy_movimientos.png") no-repeat;
+    background-size: 100%;
+    width: calc(83.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    background-position-y: -230px;
+    position: absolute;
+    animation: jumpAnimation 0.5s steps(7) infinite;
+}
+.luffy_jump_left {
+    background: url("personajes/Luffy/luffy_movimientos.png") no-repeat;
+    background-size: 100%;
+    width: calc(83.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    background-position-y: -710px;
+    position: absolute;
+    animation: jumpAnimation 0.5s steps(7) infinite;
+}
+.luffy_down_right {
+    background: url("personajes/Luffy/luffy_movimientos.png") no-repeat;
+    background-size: 100%;
+    width: calc(83.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    background-position-y: -360px;
+    position: absolute;
+    animation: walkAnimation 0.3s steps(3);
+}
+.luffy_down_left {
+    background: url("personajes/Luffy/luffy_movimientos.png") no-repeat;
+    background-size: 100%;
+    width: calc(83.125px * var(--pixel-size)*9);
+    height: calc(79.625px * var(--pixel-size)*9);
+    background-position-y: -830px;
+    position: absolute;
+    animation: walkAnimation 0.3s steps(3);
+}
+@keyframes walkAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-430px, 0, 0);
+    }
+}
+@keyframes runAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-1145px, 0, 0);
+    }
+}
+@keyframes jumpAnimation {
+    from {
+        transform: translate3d(0px, 0, 0);
+    }
+    to {
+        transform: translate3d(-1000px, 0, 0);
+    }
+}
+
+button {
+    text-decoration: none;
+}
+.titulo {
+    margin-left: 50px;
+}
+.boton {
+    display: flex;
+    margin-top: 150px;
+    justify-content: center;
+}
+.boton_container_start {
+    text-decoration: none;
+    color: black;
+    font-size: 6rem;
+    font-family: 'Imbue', serif;
+    transform: rotate(-5deg);
+    padding-top: 15px;
+    text-shadow: 2px 2px 3px rgb(66, 63, 63);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+}
+.boton_container_start:hover {
+    font-size: 6.5rem;
+    color: #91140D;
+    text-shadow: 3px 3px 20px rgb(66, 63, 63);
+}
+.boton_container {
+    display: flex;
+    flex-direction: column;
+    background: url(./images/mapa.png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    width: 515px;
+    height: 270px;
+    border: none;
+    justify-content: start;
+    align-items: center;
+}
+
+.boton_seleccion {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-decoration: none;
+}
+.boton_seleccion_container_start {
+    text-decoration: none;
+    color: black;
+    font-size: 4rem;
+    font-family: 'Imbue', serif;
+    transform: rotate(5deg);
+    padding-top: 50px;
+    padding-right: 10px;
+    text-shadow: 3px 3px 20px rgb(66, 63, 63);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+
+}
+.boton_seleccion_container_start:hover {
+    font-size: 5rem;
+    color: #91140D;
+    text-shadow: 3px 3px 20px rgb(255, 255, 255);
+}
+.boton_seleccion_container {
+    display: flex;
+    flex-direction: column;
+    background: url(./images/sombrero_de_paja.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 400px;
+    height: 220px;
+    border: none;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.smap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.seleccion__lugares {
+    display: flex;
+    justify-content: center;
+}
+
+.new_world {
+    background: url("images/new_world.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border: solid 15px #91140D;
+    border-radius: 5px;
+    border-style: outset;
+    width: 625px;
+    height: 360px;
+    transition: 1s;
+}
+.mirror_world {
+    background: url("scenarios/mirror_world.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border: solid 15px #91140D;
+    border-radius: 5px;
+    border-style: outset;
+    width: 625px;
+    height: 360px;
+    transition: 1s;
+}
+.dressrosa {
+    background: url("scenarios/dressrosa.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border: solid 15px #91140D;
+    border-radius: 5px;
+    border-style: outset;
+    width: 625px;
+    height: 360px;
+    transition: 1s;
+}
+.enies_lobby {
+    background: url("scenarios/enies_lobby.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border: solid 15px #91140D;
+    border-radius: 5px;
+    border-style: outset;
+    width: 625px;
+    height: 360px;
+    transition: 1s;
+}
+.marinford {
+    background: url("scenarios/marineford.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    border: solid 15px #91140D;
+    border-radius: 5px;
+    border-style: outset;
+    width: 625px;
+    height: 360px;
+    transition: 1s;
+}
+
+.body__seleccion {
+    background-image: url(./images/fondo\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+}
+
+.table {
+    text-align: center;
+    position: relative;
+    color: white;
+}
+.table__div {
+    margin-top: 10px;
+    overflow: hidden;
+    overflow-y: auto;
+    width: 400px;
+    height: 600px;
+}
+.table__div::-webkit-scrollbar {
+    width: 10px;
+}
+.table__div::-webkit-scrollbar-thumb {
+    background: #91140D;
+    border-radius: 10px;
+}
+.teclas {
+    width: 30px;
+}
+.info__icon {
+    width: 40px;
+}
+.info__boton {
+    border: none;
+    background: none;
+}
+.info_teclados {
+    position: absolute;
+    margin-top: -20px;
+    margin-left: 10px;
+}
+.lugares {
+    margin-left: 12px;
+    margin-right: 12px;
+}
