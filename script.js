@@ -32,7 +32,7 @@ luffy.hp = 40000;
 luffy.stamina = 1000;
 let staminaMax = 1000;
 let held_directions = [];
-let speed = 3;
+let speed = 5;
 let luffyDaño = 14;
 let vision = "r";
 
@@ -409,7 +409,7 @@ const placeCharacter = () => {
                 luffy.setAttribute("class", "luffy");
                 luffy_2.setAttribute("class", "luffy_jump_right pixelart");
                 if (luffy.y > 10) {
-                    luffy.y -= speed*3;
+                    luffy.y -= speed*5;
                 }
                 vision = "r";
             }
@@ -417,7 +417,7 @@ const placeCharacter = () => {
                 luffy.setAttribute("class", "luffy");
                 luffy_2.setAttribute("class", "luffy_jump_left pixelart");
                 if (luffy.y > 10) {
-                    luffy.y -= speed*3;
+                    luffy.y -= speed*5;
                 }
                 vision = "l";
             }
