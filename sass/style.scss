@@ -1,0 +1,23 @@
+@import "./inicio.scss";
+
+@import "./menu.scss";
+
+@import "./pelea.scss";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+button {
+    text-decoration: none;
+}
+
+.pixelart {
+    image-rendering: pixelated;
+}
+
+:root {
+    --pixel-size: 1.5;
+}

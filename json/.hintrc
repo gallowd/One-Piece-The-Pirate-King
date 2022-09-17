@@ -3,10 +3,12 @@
     "development"
   ],
   "hints": {
-    "axe/name-role-value": [
+    "compat-api/css": [
       "default",
       {
-        "button-name": "off"
+        "ignore": [
+          "image-rendering: pixelated"
+        ]
       }
     ],
     "axe/keyboard": [
@@ -16,13 +18,12 @@
       }
     ],
     "button-type": "off",
-    "compat-api/css": [
+    "axe/name-role-value": [
       "default",
       {
-        "ignore": [
-          "image-rendering: pixelated"
-        ]
+        "button-name": "off"
       }
-    ]
+    ],
+    "highest-available-document-mode": "off"
   }
 }

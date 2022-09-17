@@ -1,0 +1,168 @@
+.body__seleccion {
+    background-image: url(../images/fondo\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: hidden;
+
+    .info_teclados {
+        position: absolute;
+        margin-top: -20px;
+        margin-left: 10px;
+
+        .info__icon {
+            width: 40px;
+        }
+
+        .table__div {
+            margin-top: 10px;
+            overflow: hidden;
+            overflow-y: auto;
+            width: 400px;
+            height: 600px;
+
+            .table {
+                text-align: center;
+                position: relative;
+                color: white;
+
+                .teclas {
+                    width: 30px;
+                }
+            }
+        }
+        .table__div::-webkit-scrollbar {
+            width: 10px;
+        }
+        .table__div::-webkit-scrollbar-thumb {
+            background: #91140D;
+            border-radius: 10px;
+        }
+    }
+
+    .smap {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        margin-top: 30px;
+
+        .new_world {
+            background: url("../images/new_world.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            border: solid 15px #91140D;
+            border-radius: 5px;
+            border-style: outset;
+            width: 625px;
+            height: 360px;
+            transition: 1s;
+        }
+        .mirror_world {
+            background: url("../scenarios/mirror_world.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            border: solid 15px #91140D;
+            border-radius: 5px;
+            border-style: outset;
+            width: 625px;
+            height: 360px;
+            transition: 1s;
+        }
+        .dressrosa {
+            background: url("../scenarios/dressrosa.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            border: solid 15px #91140D;
+            border-radius: 5px;
+            border-style: outset;
+            width: 625px;
+            height: 360px;
+            transition: 1s;
+        }
+        .enies_lobby {
+            background: url("../scenarios/enies_lobby.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            border: solid 15px #91140D;
+            border-radius: 5px;
+            border-style: outset;
+            width: 625px;
+            height: 360px;
+            transition: 1s;
+        }
+        .marinford {
+            background: url("../scenarios/marineford.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+            border: solid 15px #91140D;
+            border-radius: 5px;
+            border-style: outset;
+            width: 625px;
+            height: 360px;
+            transition: 1s;
+        }
+    }
+
+    .seleccion__lugares {
+        display: flex;
+        justify-content: center;
+
+        .lugares {
+            margin-left: 12px;
+            margin-right: 12px;
+
+            .info__boton {
+                border: none;
+                background: none;
+
+                .info__icon {
+                    width: 40px;
+                }
+            }
+        }
+    }
+
+    .boton_seleccion {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        text-decoration: none;
+
+        .boton_seleccion_container {
+            display: flex;
+            flex-direction: column;
+            background: url(../images/sombrero_de_paja.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 400px;
+            height: 220px;
+            border: none;
+            justify-content: start;
+            align-items: center;
+            margin-top: 20px;
+
+            .boton_seleccion_container_start {
+                text-decoration: none;
+                color: black;
+                font-size: 4rem;
+                font-family: 'Imbue', serif;
+                transform: rotate(5deg);
+                padding-top: 50px;
+                padding-right: 10px;
+                text-shadow: 3px 3px 20px rgb(66, 63, 63);
+                transition-duration: 0.3s;
+                transition-timing-function: ease-out;
+            
+            }
+            .boton_seleccion_container_start:hover {
+                font-size: 5rem;
+                color: #91140D;
+                text-shadow: 3px 3px 20px rgb(255, 255, 255);
+            }
+        }
+    }
+}
